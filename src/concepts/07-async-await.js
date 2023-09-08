@@ -9,7 +9,7 @@ export const asyncAwait2Component = async (element) => {
   // const value2 = await mediumPromise();
   // const value3 = await fastPromise();
 
-  const { value1, value2, value3 } = await Promise.all([
+  const [value1, value2, value3] = await Promise.all([
     slowPromise(),
     mediumPromise(),
     fastPromise(),
